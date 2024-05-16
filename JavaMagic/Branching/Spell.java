@@ -1,29 +1,43 @@
 import java.util.*;
 import java.lang.*;
 
-public class Main{
-    public static void main(String[] args){
+public class Spell {
+    public void hat() {
 
-        int first = new Random().nextInt();
-        int second = new Random().nextInt();
-        System.out.println("Число 1: " + first + " " + "Число 2: " + second);
+        Scanner in = new Scanner(System.in);
+        System.out.println("“Ты предпочитаешь работать в команде? (Да/Нет)” ");
+        String answer1 = in.next();
 
-        if (first % 2 == 0 && second % 2 == 0){
-            int res1 = first / 2;
-            int res2 = second / 2;
-            int summ = res1 + res2;
-            System.out.println("Сумма: " + summ);
-        } if (first % 2 == 0 && second % 2 != 0){
-            int res_f = first / 2;
-            System.out.println("Первое число, четное: " + res_f);
-        } if (first % 2 != 0 && second % 2 == 0){
-            int res_s = second / 2;
-            System.out.println("Второе число, четное: " + res_s);
-        } if (first % 2 != 0 && second % 2 != 0) {
-            System.out.println("Оба числа нечетные, их сумма: " + (first + second));
+        System.out.println("“Ты любишь разгадывать головоломки? (Да/Нет)” ");
+        String answer2 = in.next();
+
+        System.out.println("“Ты идешь на риск, чтобы достичь своей цели? (Да/Нет)” ");
+        String answer3 = in.next();
+
+        System.out.println("“Ты проявляешь заботу к существам и природе? (Да/Нет)” ");
+        String answer4 = in.next();
+
+
+        if (answer1.equals("Да")) {
+            if (answer3.equals("Да")) {
+                System.out.println("Гриффиндор");
+            } else {
+                System.out.println("Пуффендуй");
+            }
+        } else if (answer2.equals("Да")) {
+            if (answer1.equals("Да")) {
+                System.out.println("Когтевран");
+            } else if (answer3.equals("Да")) {
+                System.out.println("Когтевран");
+            } else {
+                System.out.println("Слизерин");
+            }
+        } else {
+            if (answer3.equals("Да")) {
+                System.out.println("Слизерин");
+            } else {
+                System.out.println("Пуффендуй");
+            }
         }
-        Spell cl = new Spell();
-        cl.hat();
-
     }
 }
