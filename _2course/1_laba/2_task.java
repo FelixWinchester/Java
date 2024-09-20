@@ -9,7 +9,7 @@ public class Main {
     }
 }
 
-// Java Class SimpleUrl
+// Java Class SimpleUrl (2)
 public class SimpleUrl {
     private String protocol;
     private String address;
